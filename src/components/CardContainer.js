@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
-export default function CardContainer() {  //this is a function that runs when 
+export default function CardContainer() { 
+     //this is a function that runs when 
     //you load your components
     // all components have a life cycle ie: like mount/load or unmount from the DOM
     //1. As soon as component loads/mounting -fetch data
@@ -10,7 +11,6 @@ export default function CardContainer() {  //this is a function that runs when
             .then(res => res.json())
             .then(data => setBlogPosts(data))
             .catch(err => console.error(err))
-
     }, [])
     //2. Put data array in state variable
     //3.  Map data array from state variable
@@ -34,13 +34,14 @@ export default function CardContainer() {  //this is a function that runs when
     }
 
 
-return (<>
+return (
+<>
     <form action='' onSubmit={e => handleFormSubmit(e)}>
-        <label htmlFor=''>
-            <input type='text' name='title' id='' />
+        <label htmlFor='title'>
+            <input type='text' name='title' />
         </label>
-        <label htmlFor=''>
-            <input type='text' name='content' id='' />
+        <label htmlFor='content'>
+            <input type='text' name='content'  />
         </label>
         <button type='submit'>Add BlogPost</button>
     </form>
@@ -57,7 +58,8 @@ return (<>
         })}
 
     </div>
-</>)
+</>
+)
 
 
 

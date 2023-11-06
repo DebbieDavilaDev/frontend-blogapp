@@ -5,9 +5,7 @@ import CardContainer from '../components/CardContainer.js'
 export default function Home() {
     return (
         <>
-            <Nav />
             <CardContainer />
-            <Footer />
         </>
     )
 }
